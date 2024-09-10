@@ -15,8 +15,8 @@ This Python script connects to your ESPN Fantasy Football league, exports all re
 ### Step 1: Clone the Repository
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/jmukobi/fantasy_football.git
+cd fantasy_football
 ```
 
 ### Step 2: Install Required Packages
