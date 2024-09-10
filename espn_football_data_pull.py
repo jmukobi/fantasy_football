@@ -1,9 +1,24 @@
 from espn_api.football import League
 import json
-import secrets
 import pyperclip
 import datetime
 import os
+import tkinter as tk
+from tkinter import messagebox
+from tkinter import ttk
+from tkinter.font import Font
+import ttkbootstrap as ttk
+from ttkbootstrap.constants import *
+
+# Try to import secrets.py; if it fails, handle the error
+try:
+    import secrets
+    espn_s2 = secrets.espn_s2
+    swid = secrets.SWID
+except ImportError:
+    espn_s2 = None
+    swid = None
+    messagebox.showerror("Error", "Missing secrets.py! Please ensure that secrets.py exists and contains your ESPN S2 and SWID cookies.")
 
 # Function to initialize the league with authentication (private league)
 def initialize_league(league_id, year, espn_s2, swid):
@@ -139,7 +154,6 @@ def get_date_info(league):
     }
     return date_info
 
-
 def export_all_league_data(league, my_team_id, week):
     team_info = export_team_info(league, my_team_id)
     player_info = export_player_info(league, my_team_id)
@@ -174,139 +188,110 @@ def export_all_league_data(league, my_team_id, week):
 def copy_prompt_to_clipboard():
     """
     Copies the detailed Fantasy Football Coach GPT prompt to the clipboard.
-    
-    Args:
-        week (int): The current week of the fantasy football league.
-        day (str): The current day of the week.
     """
-    prompt_text = """
-    ### Fantasy Football Coach GPT Prompt
-
-    **Context:**  
-    You are a Fantasy Football coach that helps analyze team performance, matchups, player statistics, and other league factors to recommend actions for managing a fantasy football team. I am providing you with a JSON file that contains data on my team’s performance, my players’ stats, upcoming matchups, recent league activities (trades, waiver wire changes, etc.), injury reports, free agents, power rankings, and more. Please carefully analyze the data and offer your best recommendations on what actions, if any, I should take to improve my team's performance.
-
-    **Data Provided:**  
-    Here’s a JSON file that includes detailed information about my team, the league, and other important data. Please analyze the following:
-    1. **Team Information**: My team’s record, wins, losses, points scored and allowed, and overall performance.
-    2. **Player Performance**: Current and projected points for each player on my roster, including injury statuses and positional rankings.
-    3. **Injury Reports**: Information about any injured players on my team and how their injury status might affect my lineup.
-    4. **Matchup Information**: Upcoming matchups, including the projected scores for both my team and my opponent, key players in the opponent’s lineup, and any potential advantages or disadvantages.
-    5. **Free Agents and Waiver Wire**: Players available for acquisition, including their performance stats, projected points, and percent ownership in other leagues.
-    6. **Power Rankings and Standings**: Where my team ranks in the league compared to others, and how my team is performing in relation to the rest of the competition.
-    7. **Recent Activity**: Trades, player additions/drops, and any other recent activities within the league.
-    8. **Roster News**: Any important roster updates or news related to my team.
-
-    **Task:**  
-    1. **Quick Overview**: Start by giving me a brief overview of how my team is looking this week. Highlight any key developments, trends, or interesting insights that I should be aware of. You can mention things like:
-       - Any standout performances or slumps from players on my team.
-       - Important injury news.
-       - Projected outcomes of the upcoming matchup.
-       - Recent league activity (e.g., trades, drops, waiver pickups) that may impact my team.
-       - Anything else notable that stands out for the week.
-
-    2. **Detailed Recommendations**: After the overview, please provide detailed and unbiased recommendations on the following:
-       - **Lineup Adjustments**: Should I make any changes to my current starting lineup? If so, which players should I start or bench, and why? Consider player performance, injury risks, and matchups for the upcoming week.
-       - **Waiver Wire or Free Agent Acquisitions**: Are there any players available in the free agent pool or on the waiver wire who I should consider adding to improve my team? If so, who should I drop from my roster, and why?
-       - **Trades**: Based on my team's strengths and weaknesses, should I consider proposing any trades? If so, which players should I target or offer, and why? Be sure to consider both my team's needs and potential trade partners in the league.
-       - **Long-Term Strategy**: Are there any long-term strategic decisions I should consider, such as preparing for the playoffs, trading for injured players who might recover, or acquiring players with favorable schedules later in the season?
-       - **Matchup-Specific Strategies**: Do you notice any specific advantages or disadvantages in my upcoming matchup that I should exploit or be cautious about? Should I adjust my lineup to maximize my chances in this specific matchup?
-       - **Power Rankings and League Position**: Based on my current standing in the league, what steps should I take to improve my position or maintain my lead? How can I optimize my chances for making the playoffs or securing a better seeding?
-
-    **Important Considerations:**
-    - Feel free to search the internet for additional information and context on what's going on right now in the league.
-    - Please consider both short-term and long-term implications for any actions you recommend.
-    - Take into account potential risks (e.g., injury-prone players, tough upcoming matchups) and rewards (e.g., breakout players, favorable schedules).
-    - Provide detailed reasoning behind every recommendation, explaining why a specific change or action would be beneficial for my team.
-    - Avoid bias based on my past decisions or current roster. Focus solely on the data provided and the best available actions to improve my team’s performance.
-    - With the recommendations, pick one set of things I should do, and DON'T GIVE OPTIONS. Just tell me exactly what you think is the best course of action as concisely as possible.
-
-    **JSON Input Format:**  
-    The JSON file contains data in the following format (this is a sample structure to guide your analysis):
-    '''json
-    {
-        "team_info": {
-            "team_name": "My Team",
-            "wins": 5,
-            "losses": 3,
-            "points_for": 1025,
-            "points_against": 1000,
-            ...
-        },
-        "player_info": [
-            {
-                "name": "Player 1",
-                "position": "WR",
-                "total_points": 150,
-                "projected_points": 20,
-                "injury_status": "Healthy",
-                ...
-            },
-            ...
-        ],
-        "matchup_info": {
-            "my_team_projected": 110,
-            "opponent_team_name": "Opponent Team",
-            "opponent_projected_score": 115,
-            "opponent_key_players": [
-                {
-                    "name": "Opponent Player 1",
-                    "points": 200,
-                    "projected_points": 25
-                },
-                ...
-            ]
-        },
-        "free_agents": [
-            {
-                "name": "Free Agent 1",
-                "position": "RB",
-                "total_points": 100,
-                "projected_points": 12,
-                ...
-            },
-            ...
-        ],
-        "recent_activity": [
-            {
-                "date": 1694032512000,
-                "action_type": "ADDED",
-                "player_name": "New Player",
-                "position": "WR",
-                ...
-            },
-            ...
-        ],
-        "power_rankings": [
-            {
-                "team_name": "Top Team",
-                "score": 95.5
-            },
-            ...
-        ],
-        "injury_news": [
-            {
-                "name": "Player 2",
-                "position": "RB",
-                "injury_status": "Questionable",
-                "projected_points": 15,
-                ...
-            }
-        ]
-    }
-    '''
-
-    **Output Format:**  
-    Return your analysis in two sections:
-    1. **Quick Overview**: A brief summary of how my team is looking this week, highlighting key developments.
-    2. **Recommendations**: A detailed list of recommended actions, with explanations for each suggestion.
-    """
+    with open("prompt.txt", "r") as file:
+        prompt_text = file.read()
 
     # Copy the text to the clipboard
     pyperclip.copy(prompt_text)
-    print("The Fantasy Football Coach GPT prompt has been copied to your clipboard!\n")
+    print("The Fantasy Football Coach ChatGPT prompt has been copied to your clipboard!\n")
+
+def run_export_data(league_id, year, my_team_id, espn_s2, swid, status_label, team_label, week_label):
+    try:
+        # Check if espn_s2 and swid are available
+        if not espn_s2 or not swid:
+            raise ValueError("Missing ESPN S2 or SWID cookies. Please ensure secrets.py is correctly configured.")
+        
+        # Initialize the league and export data
+        league = initialize_league(league_id, year, espn_s2, swid)
+        week = league.current_week
+        team_name = league.teams[my_team_id - 1].team_name
+        
+        # Export league data
+        export_all_league_data(league, my_team_id, week)
+
+        # Update the status, team name, and week number
+        status_label.config(text=f"Data for Week {week} exported successfully!", bootstyle="success")
+        team_label.config(text=f"Team: {team_name}", bootstyle="warning")
+        week_label.config(text=f"Week: {week}", bootstyle="warning")
+    except Exception as e:
+        messagebox.showerror("Error", f"Failed to export data: {str(e)}")
+
+def copy_gpt_prompt(status_label):
+    try:
+        # Copy prompt to clipboard
+        copy_prompt_to_clipboard()
+        status_label.config(text="ChatGPT prompt copied to clipboard!")
+    except Exception as e:
+        messagebox.showerror("Error", f"Failed to copy prompt: {str(e)}")
+
+# GUI setup
+def create_gui():
+    root = ttk.Window(themename="superhero")  # You can choose different themes here
+    root.title("Fantasy Football Data Exporter")
+    root.geometry("400x450")  # Set window size
+    
+    # Title label
+    title_label = ttk.Label(root, text="Fantasy Football Data Exporter", font=("Helvetica", 16, "bold"))
+    title_label.pack(pady=10)
+    
+    # Labels and Entries for league_id, year, team_id, espn_s2, swid
+    input_frame = ttk.Frame(root)
+    input_frame.pack(pady=10)
+
+    ttk.Label(input_frame, text="League ID:", font=("Helvetica", 12), bootstyle="info").grid(row=0, column=0, padx=5, pady=5)
+    league_id_entry = ttk.Entry(input_frame, width=20)
+    league_id_entry.grid(row=0, column=1, padx=5, pady=5)
+    league_id_entry.insert(0, str(1339216694))  # Prefill with existing data
+
+    ttk.Label(input_frame, text="Year:", font=("Helvetica", 12), bootstyle="info").grid(row=1, column=0, padx=5, pady=5)
+    year_entry = ttk.Entry(input_frame, width=20)
+    year_entry.grid(row=1, column=1, padx=5, pady=5)
+    year_entry.insert(0, "2024")  # Prefill with existing data
+    
+    ttk.Label(input_frame, text="Team ID:", font=("Helvetica", 12), bootstyle="info").grid(row=2, column=0, padx=5, pady=5)
+    team_id_entry = ttk.Entry(input_frame, width=20)
+    team_id_entry.grid(row=2, column=1, padx=5, pady=5)
+    team_id_entry.insert(0, str(2))  # Prefill with existing data
+    
+    ttk.Label(input_frame, text="ESPN S2:", font=("Helvetica", 12), bootstyle="info").grid(row=3, column=0, padx=5, pady=5)
+    espn_s2_entry = ttk.Entry(input_frame, width=20)
+    espn_s2_entry.grid(row=3, column=1, padx=5, pady=5)
+    espn_s2_entry.insert(0, espn_s2 if espn_s2 else "")  # Prefill with data from secrets.py
+    
+    ttk.Label(input_frame, text="SWID:", font=("Helvetica", 12), bootstyle="info").grid(row=4, column=0, padx=5, pady=5)
+    swid_entry = ttk.Entry(input_frame, width=20)
+    swid_entry.grid(row=4, column=1, padx=5, pady=5)
+    swid_entry.insert(0, swid if swid else "")  # Prefill with data from secrets.py
+    
+    # Team name and week number labels
+    team_label = ttk.Label(root, text="Team: ", font=("Helvetica", 12), bootstyle="warning")
+    team_label.pack(pady=5)
+
+    week_label = ttk.Label(root, text="Week: ", font=("Helvetica", 12), bootstyle="warning")
+    week_label.pack(pady=5)
+    
+    # Status label
+    status_label = ttk.Label(root, text="", font=("Helvetica", 12), bootstyle="success")
+    status_label.pack(pady=5)
+
+    # Buttons with custom styling
+    button_frame = ttk.Frame(root)
+    button_frame.pack(pady=10)
+    
+    export_button = ttk.Button(button_frame, text="Export Data", command=lambda: run_export_data(
+        int(league_id_entry.get()), int(year_entry.get()), int(team_id_entry.get()),
+        espn_s2_entry.get(), swid_entry.get(), status_label, team_label, week_label))
+    export_button.grid(row=0, column=0, padx=10, pady=10)
+
+    copy_button = ttk.Button(button_frame, text="Copy ChatGPT Prompt", command=lambda: copy_gpt_prompt(status_label))
+    copy_button.grid(row=0, column=1, padx=10, pady=10)
+
+    # Start the GUI loop
+    root.mainloop()
 
 # Main function to execute the process
-def main(league_id, year, my_team_id, espn_s2, swid):
+'''def main(league_id, year, my_team_id, espn_s2, swid):
     """
     Main function to extract league and team data, and save them to JSON files.
     
@@ -327,10 +312,13 @@ def main(league_id, year, my_team_id, espn_s2, swid):
 
     # Copy the GPT prompt to clipboard
     copy_prompt_to_clipboard()
- 
-# Call the main function
+''' 
+# Run Script
 if __name__ == '__main__':
+    create_gui()
+    """
+    y = input("Press Enter to exit...")
     league_id = 1339216694  # Replace with your league ID
     year = 2024  # Replace with the current year, e.g., 2024
     my_team_id = 2  # Replace with your team ID
-    main(league_id, year, my_team_id, secrets.espn_s2, secrets.SWID)
+    main(league_id, year, my_team_id, secrets.espn_s2, secrets.SWID)"""
