@@ -1,9 +1,13 @@
+```markdown
 # Fantasy Football League Data Exporter
 
-This Python script connects to your ESPN Fantasy Football league, exports all relevant data about your team, matchups, players, free agents, and recent activity, and generates a detailed prompt to ask GPT for recommendations on how to improve your team. The prompt can be copied to your clipboard, and all exported data is saved in a JSON file.
+![Fantasy Football GUI](./gui_sample.png)
+
+This Python script connects to your ESPN Fantasy Football league, exports all relevant data about your team, matchups, players, free agents, and recent activity, and generates a detailed prompt to ask GPT for recommendations on how to improve your team. The script features a modern graphical user interface (GUI) that allows users to easily input their league information and export data with a click.
 
 ## Features
 
+- Modern graphical user interface (GUI) built with `ttkbootstrap`, featuring stylish buttons, labels, and automatic data input fields.
 - Exports your team's data, including player performance, matchups, and standings.
 - Retrieves free agent information for potential roster improvements.
 - Exports recent league activity such as trades and waiver wire actions.
@@ -20,9 +24,14 @@ cd fantasy_football
 ```
 
 ### Step 2: Install Required Packages
-You’ll need to install several Python packages to run the script. You can install them with the following command:
+You’ll need to install several Python packages to run the script, including `ttkbootstrap` for the GUI. You can install them with the following command:
 ```bash
 pip install -r requirements.txt
+```
+
+If you don't have a `requirements.txt` file, here’s a list of the required packages:
+```bash
+pip install ttkbootstrap espn_api pyperclip
 ```
 
 ### Step 3: Set Up `secrets.py`
@@ -50,9 +59,17 @@ python main.py
 ```
 
 The script will:
-1. Connect to your ESPN Fantasy Football league using the credentials from `secrets.py`.
-2. Export data such as your team’s performance, player stats, matchups, free agents, and recent activity into a JSON file.
-3. Copy a detailed prompt to your clipboard to ask GPT for recommendations on how to manage your team.
+1. Launch a modern GUI where you can input your league details or prefilled data.
+2. Connect to your ESPN Fantasy Football league using the credentials from `secrets.py`.
+3. Export data such as your team’s performance, player stats, matchups, free agents, and recent activity into a JSON file.
+4. Copy a detailed prompt to your clipboard to ask GPT for recommendations on how to manage your team.
+
+### GUI Features
+
+- **Automatic Field Prefilling**: If you've set up your `secrets.py` file, the ESPN S2 and SWID fields will automatically populate in the GUI.
+- **User-Friendly Interface**: Input your league ID, year, and team ID directly in the GUI and export your data with a single click.
+- **Stylish Buttons**: The interface includes large, bolded, and rounded buttons for easy interaction.
+- **Status Messages**: The status label updates dynamically to inform you whether data was exported successfully or if an error occurred.
 
 ### Output Files
 - The exported data will be saved in the `data_exports` folder in JSON format, named as `league_data_week_{week}_{timestamp}.json`.
@@ -66,6 +83,18 @@ The prompt provides GPT with all the necessary context to analyze your fantasy f
 
 Make sure **not** to share your `secrets.py` file on GitHub or with others, as it contains sensitive information.
 
+## Dependencies
+
+- `ttkbootstrap`: Provides a modern, stylish look for the GUI. Install via `pip install ttkbootstrap`.
+- `espn-api`: To interact with ESPN’s fantasy football API. Install via `pip install espn-api`.
+- `pyperclip`: Used to copy text to the clipboard. Install via `pip install pyperclip`.
+
+You can install all required dependencies by running:
+```bash
+pip install -r requirements.txt
+```
+
 ## Contributing
 
 Feel free to submit issues or pull requests if you would like to contribute to the project. Any improvements, suggestions, or bug fixes are welcome!
+```
