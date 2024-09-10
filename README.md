@@ -96,4 +96,3 @@ pip install -r requirements.txt
 ## Contributing
 
 Feel free to submit issues or pull requests if you would like to contribute to the project. Any improvements, suggestions, or bug fixes are welcome!
-```
