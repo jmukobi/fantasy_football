@@ -1,7 +1,3 @@
-Here’s a detailed `README.md` file for your GitHub repository. This includes instructions on how to use your script, the required packages, the `secrets.py` setup, and how to run the script.
-
----
-
 # Fantasy Football League Data Exporter
 
 This Python script connects to your ESPN Fantasy Football league, exports all relevant data about your team, matchups, players, free agents, and recent activity, and generates a detailed prompt to ask GPT for recommendations on how to improve your team. The prompt can be copied to your clipboard, and all exported data is saved in a JSON file.
@@ -29,16 +25,6 @@ You’ll need to install several Python packages to run the script. You can inst
 pip install -r requirements.txt
 ```
 
-Make sure the `requirements.txt` contains the following packages:
-- `espn-api` (for connecting to ESPN Fantasy Football API)
-- `pyperclip` (for copying text to the clipboard)
-
-If you don't have a `requirements.txt` file, create one with the following content:
-```
-espn-api
-pyperclip
-```
-
 ### Step 3: Set Up `secrets.py`
 The script requires your ESPN Fantasy Football cookies (`espn_s2` and `swid`) to authenticate with your private league. You can set these up in a `secrets.py` file.
 
@@ -50,7 +36,7 @@ The script requires your ESPN Fantasy Football cookies (`espn_s2` and `swid`) to
 2. Open `secrets.py` and replace the placeholder values with your actual `espn_s2` and `swid` cookie values. Here’s an example of what it should look like:
    ```python
    espn_s2 = "YOUR_ESPN_S2_COOKIE"
-   SWID = "{YOUR_SWID_COOKIE}"
+   SWID = "YOUR_SWID_COOKIE"
    ```
 
    You can find these cookie values by logging into ESPN Fantasy Football, opening the Developer Tools in your browser (usually by pressing F12), and looking under the "Application" tab for the cookies.
@@ -78,28 +64,8 @@ After running the script, the prompt for GPT will be copied to your clipboard. Y
 
 The prompt provides GPT with all the necessary context to analyze your fantasy football team and give you recommendations for lineup changes, trades, and other strategies.
 
-## Example of `secrets_example.py`
-
-Here is what `secrets_example.py` looks like. Replace the placeholders with your actual ESPN credentials:
-
-```python
-# secrets_example.py
-
-# Replace these with your actual ESPN Fantasy Football credentials.
-espn_s2 = "YOUR_ESPN_S2_COOKIE"
-SWID = "{YOUR_SWID_COOKIE}"
-```
-
 Make sure **not** to share your `secrets.py` file on GitHub or with others, as it contains sensitive information.
 
 ## Contributing
 
 Feel free to submit issues or pull requests if you would like to contribute to the project. Any improvements, suggestions, or bug fixes are welcome!
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
----
-
-Now, this `README.md` file will display correctly on GitHub, and it gives all the necessary information for users to install, configure, and run your fantasy football script. Let me know if you need any further adjustments!
