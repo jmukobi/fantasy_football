@@ -1,4 +1,3 @@
-```markdown
 # Fantasy Football League Data Exporter
 
 ![Fantasy Football GUI](./gui_sample.png)
