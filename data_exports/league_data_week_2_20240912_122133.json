@@ -1,0 +1,1363 @@
+{
+    "date_info": {
+        "current_day of the week": "Thursday",
+        "current_week": 2
+    },
+    "team_info": {
+        "team_name": "Grit, Precision, Touchdown",
+        "wins": 1,
+        "losses": 0,
+        "points_for": 102.46,
+        "points_against": 98.56,
+        "acquisitions": 0,
+        "acquisition_budget_spent": 0,
+        "roster": [
+            {
+                "player_name": "Ja'Marr Chase",
+                "position": "WR",
+                "points": 12.2,
+                "projected_points": 289.45,
+                "injured": false
+            },
+            {
+                "player_name": "Travis Etienne Jr.",
+                "position": "RB",
+                "points": 11.9,
+                "projected_points": 225.37,
+                "injured": false
+            },
+            {
+                "player_name": "Chris Olave",
+                "position": "WR",
+                "points": 3.1,
+                "projected_points": 245.77,
+                "injured": false
+            },
+            {
+                "player_name": "Rachaad White",
+                "position": "RB",
+                "points": 16.6,
+                "projected_points": 225.31,
+                "injured": false
+            },
+            {
+                "player_name": "Kenneth Walker III",
+                "position": "RB",
+                "points": 18.9,
+                "projected_points": 212.4,
+                "injured": false
+            },
+            {
+                "player_name": "Joe Burrow",
+                "position": "QB",
+                "points": 8.06,
+                "projected_points": 278.72,
+                "injured": false
+            },
+            {
+                "player_name": "Chris Godwin",
+                "position": "WR",
+                "points": 22.3,
+                "projected_points": 214.03,
+                "injured": false
+            },
+            {
+                "player_name": "Diontae Johnson",
+                "position": "WR",
+                "points": 3.9,
+                "projected_points": 208.5,
+                "injured": false
+            },
+            {
+                "player_name": "Keenan Allen",
+                "position": "WR",
+                "points": 6.9,
+                "projected_points": 202.19,
+                "injured": false
+            },
+            {
+                "player_name": "David Njoku",
+                "position": "TE",
+                "points": 8.4,
+                "projected_points": 170.71,
+                "injured": true
+            },
+            {
+                "player_name": "Jaylen Warren",
+                "position": "RB",
+                "points": 4.0,
+                "projected_points": 177.64,
+                "injured": false
+            },
+            {
+                "player_name": "Gus Edwards",
+                "position": "RB",
+                "points": 3.8,
+                "projected_points": 143.02,
+                "injured": false
+            },
+            {
+                "player_name": "Kirk Cousins",
+                "position": "QB",
+                "points": 6.2,
+                "projected_points": 250.92,
+                "injured": false
+            },
+            {
+                "player_name": "Hollywood Brown",
+                "position": "WR",
+                "points": 0.0,
+                "projected_points": 140.29,
+                "injured": false
+            },
+            {
+                "player_name": "Gabe Davis",
+                "position": "WR",
+                "points": 9.2,
+                "projected_points": 170.83,
+                "injured": false
+            },
+            {
+                "player_name": "Greg Zuerlein",
+                "position": "K",
+                "points": 1.0,
+                "projected_points": 140.96,
+                "injured": false
+            }
+        ]
+    },
+    "player_info": [
+        {
+            "name": "Ja'Marr Chase",
+            "position": "WR",
+            "total_points": 12.2,
+            "avg_points": 12.2,
+            "projected_total_points": 289.45,
+            "injury_status": "ACTIVE",
+            "lineup_slot": "WR"
+        },
+        {
+            "name": "Travis Etienne Jr.",
+            "position": "RB",
+            "total_points": 11.9,
+            "avg_points": 11.9,
+            "projected_total_points": 225.37,
+            "injury_status": "ACTIVE",
+            "lineup_slot": "RB"
+        },
+        {
+            "name": "Chris Olave",
+            "position": "WR",
+            "total_points": 3.1,
+            "avg_points": 3.1,
+            "projected_total_points": 245.77,
+            "injury_status": "ACTIVE",
+            "lineup_slot": "WR"
+        },
+        {
+            "name": "Rachaad White",
+            "position": "RB",
+            "total_points": 16.6,
+            "avg_points": 16.6,
+            "projected_total_points": 225.31,
+            "injury_status": "ACTIVE",
+            "lineup_slot": "RB"
+        },
+        {
+            "name": "Kenneth Walker III",
+            "position": "RB",
+            "total_points": 18.9,
+            "avg_points": 18.9,
+            "projected_total_points": 212.4,
+            "injury_status": "QUESTIONABLE",
+            "lineup_slot": "RB/WR/TE"
+        },
+        {
+            "name": "Joe Burrow",
+            "position": "QB",
+            "total_points": 8.06,
+            "avg_points": 8.06,
+            "projected_total_points": 278.72,
+            "injury_status": "ACTIVE",
+            "lineup_slot": "QB"
+        },
+        {
+            "name": "Chris Godwin",
+            "position": "WR",
+            "total_points": 22.3,
+            "avg_points": 22.3,
+            "projected_total_points": 214.03,
+            "injury_status": "ACTIVE",
+            "lineup_slot": "RB/WR/TE"
+        },
+        {
+            "name": "Diontae Johnson",
+            "position": "WR",
+            "total_points": 3.9,
+            "avg_points": 3.9,
+            "projected_total_points": 208.5,
+            "injury_status": "ACTIVE",
+            "lineup_slot": "BE"
+        },
+        {
+            "name": "Keenan Allen",
+            "position": "WR",
+            "total_points": 6.9,
+            "avg_points": 6.9,
+            "projected_total_points": 202.19,
+            "injury_status": "QUESTIONABLE",
+            "lineup_slot": "BE"
+        },
+        {
+            "name": "David Njoku",
+            "position": "TE",
+            "total_points": 8.4,
+            "avg_points": 8.4,
+            "projected_total_points": 170.71,
+            "injury_status": "OUT",
+            "lineup_slot": "TE"
+        },
+        {
+            "name": "Jaylen Warren",
+            "position": "RB",
+            "total_points": 4.0,
+            "avg_points": 4.0,
+            "projected_total_points": 177.64,
+            "injury_status": "ACTIVE",
+            "lineup_slot": "BE"
+        },
+        {
+            "name": "Gus Edwards",
+            "position": "RB",
+            "total_points": 3.8,
+            "avg_points": 3.8,
+            "projected_total_points": 143.02,
+            "injury_status": "ACTIVE",
+            "lineup_slot": "BE"
+        },
+        {
+            "name": "Kirk Cousins",
+            "position": "QB",
+            "total_points": 6.2,
+            "avg_points": 6.2,
+            "projected_total_points": 250.92,
+            "injury_status": "ACTIVE",
+            "lineup_slot": "BE"
+        },
+        {
+            "name": "Hollywood Brown",
+            "position": "WR",
+            "total_points": 0.0,
+            "avg_points": 0.0,
+            "projected_total_points": 140.29,
+            "injury_status": "QUESTIONABLE",
+            "lineup_slot": "BE"
+        },
+        {
+            "name": "Gabe Davis",
+            "position": "WR",
+            "total_points": 9.2,
+            "avg_points": 9.2,
+            "projected_total_points": 170.83,
+            "injury_status": "ACTIVE",
+            "lineup_slot": "BE"
+        },
+        {
+            "name": "Greg Zuerlein",
+            "position": "K",
+            "total_points": 1.0,
+            "avg_points": 1.0,
+            "projected_total_points": 140.96,
+            "injury_status": "ACTIVE",
+            "lineup_slot": "K"
+        }
+    ],
+    "matchup_info": [
+        {
+            "home_team": "Still Purdy Awful ",
+            "away_team": "Carlin the Cherry On Top",
+            "home_score": 0.0,
+            "away_score": 0.0,
+            "home_projected": 118.89,
+            "away_projected": 132.77,
+            "home_lineup": [
+                {
+                    "player_name": "Tyreek Hill",
+                    "points": 0,
+                    "projected_points": 336.98
+                },
+                {
+                    "player_name": "Puka Nacua",
+                    "points": 0,
+                    "projected_points": 190.79
+                },
+                {
+                    "player_name": "Patrick Mahomes",
+                    "points": 0,
+                    "projected_points": 340.18
+                },
+                {
+                    "player_name": "Mark Andrews",
+                    "points": 0,
+                    "projected_points": 180.6
+                },
+                {
+                    "player_name": "Josh Jacobs",
+                    "points": 0,
+                    "projected_points": 245.25
+                },
+                {
+                    "player_name": "Rome Odunze",
+                    "points": 0,
+                    "projected_points": 135.47
+                },
+                {
+                    "player_name": "D'Andre Swift",
+                    "points": 0,
+                    "projected_points": 193.53
+                },
+                {
+                    "player_name": "Jakobi Meyers",
+                    "points": 0,
+                    "projected_points": 165.82
+                },
+                {
+                    "player_name": "Taysom Hill",
+                    "points": 0,
+                    "projected_points": 109.17
+                },
+                {
+                    "player_name": "Younghoe Koo",
+                    "points": 0,
+                    "projected_points": 128.56
+                },
+                {
+                    "player_name": "Brock Purdy",
+                    "points": 0,
+                    "projected_points": 294.66
+                },
+                {
+                    "player_name": "Jordan Addison",
+                    "points": 0,
+                    "projected_points": 169.24
+                },
+                {
+                    "player_name": "Tyler Lockett",
+                    "points": 0,
+                    "projected_points": 174.57
+                },
+                {
+                    "player_name": "T.J. Hockenson",
+                    "points": 0,
+                    "projected_points": 128.95
+                },
+                {
+                    "player_name": "Zach Charbonnet",
+                    "points": 0,
+                    "projected_points": 121.6
+                },
+                {
+                    "player_name": "Chris Boswell",
+                    "points": 0,
+                    "projected_points": 121.06
+                },
+                {
+                    "player_name": "Rashid Shaheed",
+                    "points": 0,
+                    "projected_points": 193.91
+                }
+            ],
+            "away_lineup": [
+                {
+                    "player_name": "Bijan Robinson",
+                    "points": 0,
+                    "projected_points": 351.3
+                },
+                {
+                    "player_name": "Saquon Barkley",
+                    "points": 0,
+                    "projected_points": 285.76
+                },
+                {
+                    "player_name": "Jalen Hurts",
+                    "points": 0,
+                    "projected_points": 339.4
+                },
+                {
+                    "player_name": "Mike Evans",
+                    "points": 0,
+                    "projected_points": 241.17
+                },
+                {
+                    "player_name": "DJ Moore",
+                    "points": 0,
+                    "projected_points": 222.22
+                },
+                {
+                    "player_name": "Evan Engram",
+                    "points": 0,
+                    "projected_points": 194.68
+                },
+                {
+                    "player_name": "Aaron Jones",
+                    "points": 0,
+                    "projected_points": 219.98
+                },
+                {
+                    "player_name": "Tank Dell",
+                    "points": 0,
+                    "projected_points": 214.74
+                },
+                {
+                    "player_name": "Jaxon Smith-Njigba",
+                    "points": 0,
+                    "projected_points": 179.87
+                },
+                {
+                    "player_name": "Ladd McConkey",
+                    "points": 0,
+                    "projected_points": 191.52
+                },
+                {
+                    "player_name": "Zack Moss",
+                    "points": 0,
+                    "projected_points": 200.57
+                },
+                {
+                    "player_name": "Jayden Reed",
+                    "points": 0,
+                    "projected_points": 200.1
+                },
+                {
+                    "player_name": "Tyler Allgeier",
+                    "points": 0,
+                    "projected_points": 99.53
+                },
+                {
+                    "player_name": "Jake Moody",
+                    "points": 0,
+                    "projected_points": 131.02
+                },
+                {
+                    "player_name": "Blake Corum",
+                    "points": 0,
+                    "projected_points": 15.34
+                },
+                {
+                    "player_name": "Isaiah Likely",
+                    "points": 0,
+                    "projected_points": 144.75
+                }
+            ]
+        },
+        {
+            "home_team": "Team Zupan",
+            "away_team": "WA Seawhales",
+            "home_score": 0.0,
+            "away_score": 0.0,
+            "home_projected": 126.49,
+            "away_projected": 124.0,
+            "home_lineup": [
+                {
+                    "player_name": "Christian McCaffrey",
+                    "points": 0,
+                    "projected_points": 366.19
+                },
+                {
+                    "player_name": "Isiah Pacheco",
+                    "points": 0,
+                    "projected_points": 252.6
+                },
+                {
+                    "player_name": "Drake London",
+                    "points": 0,
+                    "projected_points": 232.17
+                },
+                {
+                    "player_name": "Michael Pittman Jr.",
+                    "points": 0,
+                    "projected_points": 240.09
+                },
+                {
+                    "player_name": "Sam LaPorta",
+                    "points": 0,
+                    "projected_points": 215.85
+                },
+                {
+                    "player_name": "George Pickens",
+                    "points": 0,
+                    "projected_points": 212.81
+                },
+                {
+                    "player_name": "C.J. Stroud",
+                    "points": 0,
+                    "projected_points": 300.47
+                },
+                {
+                    "player_name": "Javonte Williams",
+                    "points": 0,
+                    "projected_points": 182.73
+                },
+                {
+                    "player_name": "Christian Watson",
+                    "points": 0,
+                    "projected_points": 190.46
+                },
+                {
+                    "player_name": "Courtland Sutton",
+                    "points": 0,
+                    "projected_points": 189.99
+                },
+                {
+                    "player_name": "Tyjae Spears",
+                    "points": 0,
+                    "projected_points": 165.97
+                },
+                {
+                    "player_name": "Jordan Mason",
+                    "points": 0,
+                    "projected_points": 77.42
+                },
+                {
+                    "player_name": "Evan McPherson",
+                    "points": 0,
+                    "projected_points": 126.93
+                },
+                {
+                    "player_name": "DeAndre Hopkins",
+                    "points": 0,
+                    "projected_points": 171.6
+                },
+                {
+                    "player_name": "Dallas Goedert",
+                    "points": 0,
+                    "projected_points": 164.29
+                },
+                {
+                    "player_name": "Jaylen Wright",
+                    "points": 0,
+                    "projected_points": 4.68
+                },
+                {
+                    "player_name": "Isaac Guerendo",
+                    "points": 0,
+                    "projected_points": 3.34
+                }
+            ],
+            "away_lineup": [
+                {
+                    "player_name": "Josh Allen",
+                    "points": 0,
+                    "projected_points": 350.77
+                },
+                {
+                    "player_name": "Travis Kelce",
+                    "points": 0,
+                    "projected_points": 215.77
+                },
+                {
+                    "player_name": "Justin Tucker",
+                    "points": 0,
+                    "projected_points": 133.45
+                },
+                {
+                    "player_name": "Brandon Aiyuk",
+                    "points": 0,
+                    "projected_points": 230.95
+                },
+                {
+                    "player_name": "James Cook",
+                    "points": 0,
+                    "projected_points": 251.71
+                },
+                {
+                    "player_name": "Rashee Rice",
+                    "points": 0,
+                    "projected_points": 258.86
+                },
+                {
+                    "player_name": "Amari Cooper",
+                    "points": 0,
+                    "projected_points": 188.61
+                },
+                {
+                    "player_name": "David Montgomery",
+                    "points": 0,
+                    "projected_points": 188.95
+                },
+                {
+                    "player_name": "Zamir White",
+                    "points": 0,
+                    "projected_points": 195.08
+                },
+                {
+                    "player_name": "Jerry Jeudy",
+                    "points": 0,
+                    "projected_points": 146.98
+                },
+                {
+                    "player_name": "Ezekiel Elliott",
+                    "points": 0,
+                    "projected_points": 179.25
+                },
+                {
+                    "player_name": "Keon Coleman",
+                    "points": 0,
+                    "projected_points": 181.51
+                },
+                {
+                    "player_name": "Tua Tagovailoa",
+                    "points": 0,
+                    "projected_points": 268.17
+                },
+                {
+                    "player_name": "Adam Thielen",
+                    "points": 0,
+                    "projected_points": 156.36
+                },
+                {
+                    "player_name": "Chig Okonkwo",
+                    "points": 0,
+                    "projected_points": 105.3
+                },
+                {
+                    "player_name": "Trevor Lawrence",
+                    "points": 0,
+                    "projected_points": 267.72
+                }
+            ]
+        },
+        {
+            "home_team": "Team Kelle Belles!",
+            "away_team": "Debbie's Emus",
+            "home_score": 0.0,
+            "away_score": 0.0,
+            "home_projected": 132.4,
+            "away_projected": 136.88,
+            "home_lineup": [
+                {
+                    "player_name": "CeeDee Lamb",
+                    "points": 0,
+                    "projected_points": 338.99
+                },
+                {
+                    "player_name": "Davante Adams",
+                    "points": 0,
+                    "projected_points": 254.94
+                },
+                {
+                    "player_name": "Lamar Jackson",
+                    "points": 0,
+                    "projected_points": 325.4
+                },
+                {
+                    "player_name": "Joe Mixon",
+                    "points": 0,
+                    "projected_points": 261.75
+                },
+                {
+                    "player_name": "DK Metcalf",
+                    "points": 0,
+                    "projected_points": 227.25
+                },
+                {
+                    "player_name": "George Kittle",
+                    "points": 0,
+                    "projected_points": 190.04
+                },
+                {
+                    "player_name": "Zay Flowers",
+                    "points": 0,
+                    "projected_points": 230.67
+                },
+                {
+                    "player_name": "Austin Ekeler",
+                    "points": 0,
+                    "projected_points": 161.69
+                },
+                {
+                    "player_name": "Raheem Mostert",
+                    "points": 0,
+                    "projected_points": 151.48
+                },
+                {
+                    "player_name": "Ka'imi Fairbairn",
+                    "points": 0,
+                    "projected_points": 131.89
+                },
+                {
+                    "player_name": "Dontayvion Wicks",
+                    "points": 0,
+                    "projected_points": 95.44
+                },
+                {
+                    "player_name": "Justin Herbert",
+                    "points": 0,
+                    "projected_points": 259.44
+                },
+                {
+                    "player_name": "Chuba Hubbard",
+                    "points": 0,
+                    "projected_points": 114.81
+                },
+                {
+                    "player_name": "Rico Dowdle",
+                    "points": 0,
+                    "projected_points": 159.64
+                },
+                {
+                    "player_name": "Pat Freiermuth",
+                    "points": 0,
+                    "projected_points": 132.87
+                },
+                {
+                    "player_name": "Adonai Mitchell",
+                    "points": 0,
+                    "projected_points": 81.24
+                }
+            ],
+            "away_lineup": [
+                {
+                    "player_name": "A.J. Brown",
+                    "points": 0,
+                    "projected_points": 273.71
+                },
+                {
+                    "player_name": "Garrett Wilson",
+                    "points": 0,
+                    "projected_points": 266.51
+                },
+                {
+                    "player_name": "De'Von Achane",
+                    "points": 0,
+                    "projected_points": 262.89
+                },
+                {
+                    "player_name": "Alvin Kamara",
+                    "points": 0,
+                    "projected_points": 292.08
+                },
+                {
+                    "player_name": "Deebo Samuel Sr.",
+                    "points": 0,
+                    "projected_points": 276.89
+                },
+                {
+                    "player_name": "Anthony Richardson",
+                    "points": 0,
+                    "projected_points": 299.05
+                },
+                {
+                    "player_name": "Terry McLaurin",
+                    "points": 0,
+                    "projected_points": 188.51
+                },
+                {
+                    "player_name": "Kyle Pitts",
+                    "points": 0,
+                    "projected_points": 178.32
+                },
+                {
+                    "player_name": "Tony Pollard",
+                    "points": 0,
+                    "projected_points": 209.76
+                },
+                {
+                    "player_name": "Devin Singletary",
+                    "points": 0,
+                    "projected_points": 193.02
+                },
+                {
+                    "player_name": "Chase Brown",
+                    "points": 0,
+                    "projected_points": 134.92
+                },
+                {
+                    "player_name": "Brandon Aubrey",
+                    "points": 0,
+                    "projected_points": 134.32
+                },
+                {
+                    "player_name": "Brock Bowers",
+                    "points": 0,
+                    "projected_points": 164.97
+                },
+                {
+                    "player_name": "Caleb Williams",
+                    "points": 0,
+                    "projected_points": 260.59
+                },
+                {
+                    "player_name": "Jameson Williams",
+                    "points": 0,
+                    "projected_points": 189.88
+                },
+                {
+                    "player_name": "Nick Chubb",
+                    "points": 0,
+                    "projected_points": 148.22
+                },
+                {
+                    "player_name": "Bucky Irving",
+                    "points": 0,
+                    "projected_points": 103.37
+                }
+            ]
+        },
+        {
+            "home_team": "Grit, Precision, Touchdown",
+            "away_team": "SLC CaboTracy",
+            "home_score": 0.0,
+            "away_score": 0.0,
+            "home_projected": 119.37,
+            "away_projected": 137.93,
+            "home_lineup": [
+                {
+                    "player_name": "Ja'Marr Chase",
+                    "points": 0,
+                    "projected_points": 309.89
+                },
+                {
+                    "player_name": "Travis Etienne Jr.",
+                    "points": 0,
+                    "projected_points": 261.1
+                },
+                {
+                    "player_name": "Chris Olave",
+                    "points": 0,
+                    "projected_points": 236.86
+                },
+                {
+                    "player_name": "Rachaad White",
+                    "points": 0,
+                    "projected_points": 240.11
+                },
+                {
+                    "player_name": "Kenneth Walker III",
+                    "points": 0,
+                    "projected_points": 243.11
+                },
+                {
+                    "player_name": "Joe Burrow",
+                    "points": 0,
+                    "projected_points": 286.63
+                },
+                {
+                    "player_name": "Chris Godwin",
+                    "points": 0,
+                    "projected_points": 233.75
+                },
+                {
+                    "player_name": "Diontae Johnson",
+                    "points": 0,
+                    "projected_points": 180.32
+                },
+                {
+                    "player_name": "Keenan Allen",
+                    "points": 0,
+                    "projected_points": 214.61
+                },
+                {
+                    "player_name": "David Njoku",
+                    "points": 0,
+                    "projected_points": 155.23
+                },
+                {
+                    "player_name": "Jaylen Warren",
+                    "points": 0,
+                    "projected_points": 166.35
+                },
+                {
+                    "player_name": "Gus Edwards",
+                    "points": 0,
+                    "projected_points": 141.12
+                },
+                {
+                    "player_name": "Kirk Cousins",
+                    "points": 0,
+                    "projected_points": 259.82
+                },
+                {
+                    "player_name": "Hollywood Brown",
+                    "points": 0,
+                    "projected_points": 153.16
+                },
+                {
+                    "player_name": "Gabe Davis",
+                    "points": 0,
+                    "projected_points": 156.24
+                },
+                {
+                    "player_name": "Greg Zuerlein",
+                    "points": 0,
+                    "projected_points": 131.51
+                }
+            ],
+            "away_lineup": [
+                {
+                    "player_name": "Amon-Ra St. Brown",
+                    "points": 0,
+                    "projected_points": 288.0
+                },
+                {
+                    "player_name": "Jonathan Taylor",
+                    "points": 0,
+                    "projected_points": 303.26
+                },
+                {
+                    "player_name": "Cooper Kupp",
+                    "points": 0,
+                    "projected_points": 286.13
+                },
+                {
+                    "player_name": "Dak Prescott",
+                    "points": 0,
+                    "projected_points": 297.18
+                },
+                {
+                    "player_name": "Trey McBride",
+                    "points": 0,
+                    "projected_points": 198.91
+                },
+                {
+                    "player_name": "Stefon Diggs",
+                    "points": 0,
+                    "projected_points": 240.46
+                },
+                {
+                    "player_name": "Rhamondre Stevenson",
+                    "points": 0,
+                    "projected_points": 237.87
+                },
+                {
+                    "player_name": "Harrison Butker",
+                    "points": 0,
+                    "projected_points": 137.93
+                },
+                {
+                    "player_name": "Jake Ferguson",
+                    "points": 0,
+                    "projected_points": 179.1
+                },
+                {
+                    "player_name": "Jordan Love",
+                    "points": 0,
+                    "projected_points": 223.05
+                },
+                {
+                    "player_name": "J.K. Dobbins",
+                    "points": 0,
+                    "projected_points": 202.47
+                },
+                {
+                    "player_name": "Tyler Conklin",
+                    "points": 0,
+                    "projected_points": 125.15
+                },
+                {
+                    "player_name": "Darnell Mooney",
+                    "points": 0,
+                    "projected_points": 166.02
+                },
+                {
+                    "player_name": "Jake Elliott",
+                    "points": 0,
+                    "projected_points": 134.84
+                },
+                {
+                    "player_name": "Demarcus Robinson",
+                    "points": 0,
+                    "projected_points": 122.82
+                },
+                {
+                    "player_name": "Jaleel McLaughlin",
+                    "points": 0,
+                    "projected_points": 171.43
+                }
+            ]
+        },
+        {
+            "home_team": "Better Call Haul\ud83c\udfc6\ud83c\udfc6",
+            "away_team": "OHenry'sConner n Kincaid",
+            "home_score": 0.0,
+            "away_score": 0.0,
+            "home_projected": 138.39,
+            "away_projected": 132.02,
+            "home_lineup": [
+                {
+                    "player_name": "Breece Hall",
+                    "points": 0,
+                    "projected_points": 351.41
+                },
+                {
+                    "player_name": "Jahmyr Gibbs",
+                    "points": 0,
+                    "projected_points": 256.15
+                },
+                {
+                    "player_name": "Kyren Williams",
+                    "points": 0,
+                    "projected_points": 290.19
+                },
+                {
+                    "player_name": "Jaylen Waddle",
+                    "points": 0,
+                    "projected_points": 228.71
+                },
+                {
+                    "player_name": "DeVonta Smith",
+                    "points": 0,
+                    "projected_points": 228.91
+                },
+                {
+                    "player_name": "Calvin Ridley",
+                    "points": 0,
+                    "projected_points": 228.42
+                },
+                {
+                    "player_name": "Tee Higgins",
+                    "points": 0,
+                    "projected_points": 192.02
+                },
+                {
+                    "player_name": "Brian Robinson Jr.",
+                    "points": 0,
+                    "projected_points": 203.05
+                },
+                {
+                    "player_name": "Xavier Worthy",
+                    "points": 0,
+                    "projected_points": 189.81
+                },
+                {
+                    "player_name": "Kyler Murray",
+                    "points": 0,
+                    "projected_points": 271.25
+                },
+                {
+                    "player_name": "Jonathon Brooks",
+                    "points": 0,
+                    "projected_points": 130.97
+                },
+                {
+                    "player_name": "Brian Thomas Jr.",
+                    "points": 0,
+                    "projected_points": 196.94
+                },
+                {
+                    "player_name": "Dalton Schultz",
+                    "points": 0,
+                    "projected_points": 140.62
+                },
+                {
+                    "player_name": "Joshua Palmer",
+                    "points": 0,
+                    "projected_points": 173.34
+                },
+                {
+                    "player_name": "Cameron Dicker",
+                    "points": 0,
+                    "projected_points": 129.94
+                },
+                {
+                    "player_name": "Romeo Doubs",
+                    "points": 0,
+                    "projected_points": 163.23
+                },
+                {
+                    "player_name": "Baker Mayfield",
+                    "points": 0,
+                    "projected_points": 268.83
+                }
+            ],
+            "away_lineup": [
+                {
+                    "player_name": "Justin Jefferson",
+                    "points": 0,
+                    "projected_points": 289.36
+                },
+                {
+                    "player_name": "Marvin Harrison Jr.",
+                    "points": 0,
+                    "projected_points": 223.25
+                },
+                {
+                    "player_name": "Derrick Henry",
+                    "points": 0,
+                    "projected_points": 248.15
+                },
+                {
+                    "player_name": "Nico Collins",
+                    "points": 0,
+                    "projected_points": 243.72
+                },
+                {
+                    "player_name": "Malik Nabers",
+                    "points": 0,
+                    "projected_points": 210.74
+                },
+                {
+                    "player_name": "James Conner",
+                    "points": 0,
+                    "projected_points": 230.38
+                },
+                {
+                    "player_name": "Dalton Kincaid",
+                    "points": 0,
+                    "projected_points": 171.08
+                },
+                {
+                    "player_name": "Christian Kirk",
+                    "points": 0,
+                    "projected_points": 197.21
+                },
+                {
+                    "player_name": "Najee Harris",
+                    "points": 0,
+                    "projected_points": 204.61
+                },
+                {
+                    "player_name": "Jayden Daniels",
+                    "points": 0,
+                    "projected_points": 285.81
+                },
+                {
+                    "player_name": "Trey Benson",
+                    "points": 0,
+                    "projected_points": 68.82
+                },
+                {
+                    "player_name": "Jerome Ford",
+                    "points": 0,
+                    "projected_points": 142.24
+                },
+                {
+                    "player_name": "Khalil Shakir",
+                    "points": 0,
+                    "projected_points": 148.32
+                },
+                {
+                    "player_name": "Jared Goff",
+                    "points": 0,
+                    "projected_points": 246.38
+                },
+                {
+                    "player_name": "Ja'Lynn Polk",
+                    "points": 0,
+                    "projected_points": 78.32
+                },
+                {
+                    "player_name": "Jake Bates",
+                    "points": 0,
+                    "projected_points": 129.17
+                }
+            ]
+        }
+    ],
+    "free_agents": [
+        {
+            "name": "Aaron Rodgers",
+            "position": "QB",
+            "total_points": 8.58,
+            "projected_points": 265.24
+        },
+        {
+            "name": "Mike Williams",
+            "position": "WR",
+            "total_points": 0.0,
+            "projected_points": 163.13
+        },
+        {
+            "name": "Ty Chandler",
+            "position": "RB",
+            "total_points": 7.2,
+            "projected_points": 137.1
+        },
+        {
+            "name": "Cairo Santos",
+            "position": "K",
+            "total_points": 13.0,
+            "projected_points": 137.1
+        },
+        {
+            "name": "Matthew Stafford",
+            "position": "QB",
+            "total_points": 14.68,
+            "projected_points": 240.5
+        },
+        {
+            "name": "Allen Lazard",
+            "position": "WR",
+            "total_points": 26.9,
+            "projected_points": 51.22
+        },
+        {
+            "name": "Curtis Samuel",
+            "position": "WR",
+            "total_points": 3.5,
+            "projected_points": 166.57
+        },
+        {
+            "name": "Brandin Cooks",
+            "position": "WR",
+            "total_points": 14.5,
+            "projected_points": 155.49
+        },
+        {
+            "name": "DeMario Douglas",
+            "position": "WR",
+            "total_points": 3.2,
+            "projected_points": 164.84
+        },
+        {
+            "name": "Antonio Gibson",
+            "position": "RB",
+            "total_points": 1.8,
+            "projected_points": 141.85
+        }
+    ],
+    "power_rankings": [
+        {
+            "team_name": "Debbie's Emus",
+            "score": "14.20"
+        },
+        {
+            "team_name": "Carlin the Cherry On Top",
+            "score": "13.30"
+        },
+        {
+            "team_name": "SLC CaboTracy",
+            "score": "10.85"
+        },
+        {
+            "team_name": "Team Kelle Belles!",
+            "score": "10.60"
+        },
+        {
+            "team_name": "Better Call Haul\ud83c\udfc6\ud83c\udfc6",
+            "score": "8.80"
+        },
+        {
+            "team_name": "Grit, Precision, Touchdown",
+            "score": "8.50"
+        },
+        {
+            "team_name": "OHenry'sConner n Kincaid",
+            "score": "7.60"
+        },
+        {
+            "team_name": "Team Zupan",
+            "score": "7.30"
+        },
+        {
+            "team_name": "WA Seawhales",
+            "score": "6.40"
+        },
+        {
+            "team_name": "Still Purdy Awful ",
+            "score": "5.40"
+        }
+    ],
+    "recent_activity": [
+        {
+            "date": 1726078517709,
+            "actions": [
+                {
+                    "team": "Still Purdy Awful ",
+                    "action_type": "DROPPED",
+                    "player_name": "Mike Williams"
+                },
+                {
+                    "team": "Still Purdy Awful ",
+                    "action_type": "FA ADDED",
+                    "player_name": "Rashid Shaheed"
+                }
+            ]
+        },
+        {
+            "date": 1726041817755,
+            "actions": [
+                {
+                    "team": "Debbie's Emus",
+                    "action_type": "WAIVER ADDED",
+                    "player_name": "Bucky Irving"
+                }
+            ]
+        },
+        {
+            "date": 1726041817755,
+            "actions": [
+                {
+                    "team": "Still Purdy Awful ",
+                    "action_type": "WAIVER ADDED",
+                    "player_name": "Chris Boswell"
+                }
+            ]
+        },
+        {
+            "date": 1726041817755,
+            "actions": [
+                {
+                    "team": "Carlin the Cherry On Top",
+                    "action_type": "DROPPED",
+                    "player_name": "Aaron Rodgers"
+                },
+                {
+                    "team": "Carlin the Cherry On Top",
+                    "action_type": "WAIVER ADDED",
+                    "player_name": "Isaiah Likely"
+                }
+            ]
+        },
+        {
+            "date": 1725926330280,
+            "actions": [
+                {
+                    "team": "Team Zupan",
+                    "action_type": "FA ADDED",
+                    "player_name": "Isaac Guerendo"
+                }
+            ]
+        },
+        {
+            "date": 1725602867791,
+            "actions": [
+                {
+                    "team": "Better Call Haul\ud83c\udfc6\ud83c\udfc6",
+                    "action_type": "FA ADDED",
+                    "player_name": "Baker Mayfield"
+                }
+            ]
+        },
+        {
+            "date": 1725519956786,
+            "actions": [
+                {
+                    "team": "OHenry'sConner n Kincaid",
+                    "action_type": "DROPPED",
+                    "player_name": "Cairo Santos"
+                },
+                {
+                    "team": "OHenry'sConner n Kincaid",
+                    "action_type": "WAIVER ADDED",
+                    "player_name": "Jake Bates"
+                }
+            ]
+        },
+        {
+            "date": 1725414829851,
+            "actions": [
+                {
+                    "team": "OHenry'sConner n Kincaid",
+                    "action_type": "DROPPED",
+                    "player_name": "Jake Bates"
+                },
+                {
+                    "team": "OHenry'sConner n Kincaid",
+                    "action_type": "FA ADDED",
+                    "player_name": "Cairo Santos"
+                }
+            ]
+        }
+    ]
+}

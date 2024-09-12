@@ -12,13 +12,15 @@ from ttkbootstrap.constants import *
 
 # Try to import secrets.py; if it fails, handle the error
 try:
-    import secrets
+    import secrets # type: ignore
     espn_s2 = secrets.espn_s2
     swid = secrets.SWID
 except ImportError:
     espn_s2 = None
     swid = None
     messagebox.showerror("Error", "Missing secrets.py! Please ensure that secrets.py exists and contains your ESPN S2 and SWID cookies.")
+
+FREE_AGENTS_SIZE = 25  # Change this to adjust the number of free agents for each position
 
 # Function to initialize the league with authentication (private league)
 def initialize_league(league_id, year, espn_s2, swid):
@@ -64,7 +66,8 @@ def export_player_info(league, my_team_id):
         "total_points": player.total_points,
         "avg_points": player.avg_points,
         "projected_total_points": player.projected_total_points,
-        "injury_status": player.injuryStatus
+        "injury_status": player.injuryStatus,
+        "lineup_slot": player.lineupSlot
     } for player in team.roster]
     return players
 
@@ -90,19 +93,33 @@ def export_matchup_info(league, week):
     } for box in box_scores]
     return matchups
 
-def export_free_agents(league, position=None, size=10):
-    if position:
+def export_free_agents_by_position(league, size=FREE_AGENTS_SIZE):
+    """
+    Export the top free agents by position in the league.
+
+    Args:
+        league (League): The ESPN Fantasy League object.
+        size (int): Number of free agents to export for each position.
+
+    Returns:
+        dict: A dictionary with free agents grouped by position.
+    """
+    positions = ['QB', 'RB', 'WR', 'TE', 'D/ST', 'K']  # Add other positions if needed
+    free_agents_by_position = {}
+
+    for position in positions:
         free_agents = league.free_agents(size=size, position=position)
-    else:
-        free_agents = league.free_agents(size=size)
-    
-    agents = [{
-        "name": player.name,
-        "position": player.position,
-        "total_points": player.total_points,
-        "projected_points": player.projected_total_points
-    } for player in free_agents]
-    return agents
+        agents = [{
+            "name": player.name,
+            "position": player.position,
+            "total_points": player.total_points,
+            "projected_points": player.projected_total_points
+        } for player in free_agents]
+
+        free_agents_by_position[position] = agents
+
+    return free_agents_by_position
+
 
 def export_power_rankings(league, week):
     rankings = league.power_rankings(week)
@@ -158,7 +175,7 @@ def export_all_league_data(league, my_team_id, week):
     team_info = export_team_info(league, my_team_id)
     player_info = export_player_info(league, my_team_id)
     matchup_info = export_matchup_info(league, week)
-    free_agents = export_free_agents(league)
+    free_agents_by_position = export_free_agents_by_position(league, size=FREE_AGENTS_SIZE)
     power_rankings = export_power_rankings(league, week)
     recent_activity = export_recent_activity(league)
     date_info = get_date_info(league)
@@ -168,13 +185,12 @@ def export_all_league_data(league, my_team_id, week):
         "team_info": team_info,
         "player_info": player_info,
         "matchup_info": matchup_info,
-        "free_agents": free_agents,
+        "free_agents_by_position": free_agents_by_position,
         "power_rankings": power_rankings,
         "recent_activity": recent_activity
     }
     
     # Save to JSON in a subfolder
-
     folder_path = os.path.dirname(os.path.abspath(__file__)) + "/data_exports"
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
@@ -184,6 +200,7 @@ def export_all_league_data(league, my_team_id, week):
     with open(file_path, "w") as file:
         json.dump(data, file, indent=4)
     return data
+
 
 def copy_prompt_to_clipboard():
     """
@@ -263,6 +280,13 @@ def create_gui():
     swid_entry = ttk.Entry(input_frame, width=20)
     swid_entry.grid(row=4, column=1, padx=5, pady=5)
     swid_entry.insert(0, swid if swid else "")  # Prefill with data from secrets.py
+
+    # Number of Free Agents Entry
+    ttk.Label(input_frame, text="Free Agents Size:", font=("Helvetica", 12), bootstyle="info").grid(row=5, column=0, padx=5, pady=5)
+    free_agents_size_entry = ttk.Entry(input_frame, width=20)
+    free_agents_size_entry.grid(row=5, column=1, padx=5, pady=5)
+    free_agents_size_entry.insert(0, str(FREE_AGENTS_SIZE))  # Prefill with existing data
+
     
     # Team name and week number labels
     team_label = ttk.Label(root, text="Team: ", font=("Helvetica", 12), bootstyle="warning")
@@ -316,9 +340,4 @@ def create_gui():
 # Run Script
 if __name__ == '__main__':
     create_gui()
-    """
-    y = input("Press Enter to exit...")
-    league_id = 1339216694  # Replace with your league ID
-    year = 2024  # Replace with the current year, e.g., 2024
-    my_team_id = 2  # Replace with your team ID
-    main(league_id, year, my_team_id, secrets.espn_s2, secrets.SWID)"""
+
