@@ -47,7 +47,7 @@ The script requires your ESPN Fantasy Football cookies (`espn_s2` and `swid`) to
    SWID = "YOUR_SWID_COOKIE"
    ```
 
-   You can find these cookie values by logging into ESPN Fantasy Football, opening the Developer Tools in your browser (usually by pressing F12), and looking under the "Application" tab for the cookies.
+   You can find these cookie values by logging into ESPN Fantasy Football, opening the Developer Tools in your browser (usually by pressing F12), and looking under the "Application" tab for the cookies. [Guide here](https://www.gamedaybot.com/help/espn_s2-and-swid/)
 
 ## Running the Script
 
